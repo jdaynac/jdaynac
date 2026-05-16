@@ -1134,7 +1134,7 @@
             <div class="about-text">
               <p class="hello">Hello! I'm Jimmy Daynac.</p>
               <p>I am a geosciences researcher specializing in <strong>artificial intelligence applied to geomorphology and georesources</strong>. I am particularly interested in the <strong>interactions between fluid flow and the substrate</strong>, as well as transport, deformation, and preservation processes in sedimentary systems, from aeolian bedform fields to the control of lithological and structural heterogeneities associated with fluid source and migration in reservoir systems and mineralization processes.</p>
-              <p>I combine remote sensing, field observations, modeling, and statistical/predictive analyses to quantify the mechanisms of transport, deformation, preservation, and fluid-rock reactivity in both modern and ancient sedimentary systems.</p>
+              <p>I combine remote sensing, field observations, modeling, and statistical/predictive analyses to quantify the mechanisms of transport, deformation, preservation, and fluid-rock-sediment reactivity in both modern and ancient sedimentary systems.</p>
             </div>
           </div>
         </div>
@@ -1327,7 +1327,7 @@
           <div class="timeline-item">
             <div class="date">2021 - 2024</div>
             <div>
-              <h3>Ph.D. · Earth and Planetary Sciences — Artificial Intelligence</h3>
+              <h3>Ph.D. · Earth and Planetary Sciences</h3>
               <p><strong>Le Mans University, France</strong> · UMR 6112 LPG</p>
               <p>Advisors: Paul Bessin, Stéphane Pochat, Régis Mourgues.</p>
               <p>Contribution of Artificial Intelligence to mapping for desert-scale dune analysis: Rub' Al Khali case study.</p>
@@ -1418,6 +1418,50 @@
       </div>
     </section>
 
+
+
+    <div class="cv-block">
+  <h3>Awards</h3>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="date">2025</div>
+      <div>
+        <h3>Laureate of the RISE CNRS program — AI.TER project</h3>
+        <p>
+          CNRS program supporting innovative research projects. The AI.TER project,
+          focused on the development of artificial intelligence tools for terrain analysis
+          and exploration resources, was selected as a laureate, highlighting its potential
+          impact and innovation in geosciences.
+        </p>
+        <a class="publication-link"
+           href="https://www.insu.cnrs.fr/fr/cnrsinfo/un-geoscientifique-laureat-du-programme-rise-avec-son-projet-aiter"
+           target="_blank"
+           rel="noopener noreferrer">
+          Read the CNRS article
+        </a>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">2025</div>
+      <div>
+        <h3>Thesis award — Sensitivity and Environmental Innovation 2025 mention</h3>
+        <p>
+          Recognition of the quality and relevance of doctoral research on the application
+          of artificial intelligence to dune mapping and analysis, with a focus on
+          environmental sensitivity and innovation.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
     <section id="contact">
       <div class="contact-box">
         <div>
@@ -1444,21 +1488,21 @@
     const researchContent = {
       tools: `
         <h4>Development of AI and spatial analysis tools</h4>
-        <p>Geosciences increasingly rely on high-resolution data (e.g. satellite imagery, digital elevation models, geophysical grids), and large spatial databases. These datasets now cover vast areas with growing spatial and temporal resolution, making manual interpretation increasingly difficult to apply systematically. Although expert mapping remains essential, it is often time-consuming, operator-dependent, and difficult to reproduce over large regions or complex geological patterns.</p>
+        <p>Geosciences increasingly rely on high-resolution data (e.g. satellite imagery, digital elevation models, geophysical grids), and large spatial databases. These datasets now cover vast areas with growing spatial and temporal resolution, making manual interpretation increasingly difficult to apply systematically. Although expert mapping remains essential for studying processes of generation, transport, erosion, and deformation, it is often time-consuming, operator-dependent, and difficult to reproduce over large regions or complex geological patterns.</p>
         <div class="research-panorama">
           <img src="assets/IA.jpg" alt="IA">
           <span class="image-credit">Credit: Jimmy Daynac</span>
         </div>
         <h5>Context and challenges</h5>
-        <p>Artificial intelligence provides a way to move beyond purely manual mapping by learning spatial features directly from data. Supervised and unsupervised learning techniques (machine learning and deep learning) enable the detection of objects, the segmentation of structures, and the recognition of complex spatial patterns that can be difficult to formalize using traditional rule-based methods (e.g. OBIA, thresholding) or signal-processing techniques (e.g. FFT). Their strength lies in their ability to process large volumes of data, adapt to different input datasets, and generalize detection tasks across diverse geological and geomorphological environments.</p>
+        <p>Artificial intelligence provides a way to move beyond the limits of manual mapping but also enables the generation of predictions and unique modeling approaches by learning spatial characteristics directly from homogeneous and/or heterogeneous data. Supervised and unsupervised learning techniques (machine learning and deep learning) enable the detection of objects, the segmentation of structures, and the recognition of complex spatial patterns that can be difficult to formalize using traditional rule-based methods (e.g. OBIA, thresholding) or signal-processing techniques (e.g. FFT). For modeling, more advanced AI modeling techniques enable the solution of physics and engineering problems using neural networks. These neural networks, known as PINNs (Physics Informed Neural Networks), enable the simulation of physical phenomena (e.g. problems in fluid dynamics, solid mechanics, and quantum mechanics) or the prediction of experimental results using input data such as initial conditions and physical parameters.The neural networks strength lies in their ability to process large volumes of data, adapt to different input datasets, and generalize detection tasks across diverse geological and geomorphological environments.</p>
         <p>The issue is to build workflows that transform spatial observations into measurable, testable, and geologically meaningful variables. In this context, AI must be combined with spatial statistics, including multivariate analysis, clustering, ordination methods, correlation tests, normality analysis and spatial statistics, as well as GIS processing, morphometric analysis, and geological reasoning.</p>
         <p>Several methodological questions structure this axis: how to create robust training datasets from expert annotations, how to evaluate model transferability across regions, how to quantify uncertainty, and how to connect predicted patterns with physical processes. The objective is therefore not to replace geological interpretation, but to make it scalable, reproducible, and quantitatively testable.</p>
         <h5>Why does it matter?</h5>
-        <p>AI-based mapping makes it possible to analyze spatial systems at scales that would be impossible to cover manually with the same level of detail and consistency. It enables the construction of large, reproducible databases of geological and geomorphological objects, which can then be used for statistical testing, numerical modeling, and predictive mapping.</p>
+        <p>The AI tools for mapping and modelling makes it possible to analyze spatial systems at scales that would be impossible to cover manually with the same level of detail and consistency. It enables the construction of large, reproducible databases of geological/geomorphological objects, which can then be used to test and constrain the limit conditions governing the formation and spatiotemporal evolution of the features under study (e.g. through statistical tests, numerical modeling, and predictive mapping).</p>
         <p>In my research, these methodological developments provide the foundation for two complementary scientific directions: i) the analysis of landform and bedform patterns and dynamics, ii) and the prediction of georesource systems controlled by lithological, structural, and fluid/flow processes.</p>
       `,
       dunes: `
-        <h4>Mapping dunes to read climate - past, present, and future</h4>
+        <h4>Studying dunes to read climate - past, present, and future</h4>
         <p>Aeolian dunes are among the most widespread landforms on Earth, covering between 5 and 7 million km² in arid and semi-arid regions. Their morphology (e.g. shape, size, and spatial organization) reflects the equilibrium between wind regimes, sediment availability, and surface conditions. Understanding and quantifying this morphological diversity is central to my research.</p>
         <div class="research-panorama">
           <img src="assets/Rub_al_Khali_desert.jpg" alt="Rub'Al Khali sand sea">
@@ -1483,7 +1527,7 @@
         <p>In the context of the energy transition, natural hydrogen (H₂) is emerging as a strategic, low-carbon, and potentially abundant resource (<strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0012825219304787?via%3Dihub" target="_blank" rel="noopener noreferrer">Zgonnik, 2020</a></strong>; <strong><a href="https://www.science.org/doi/full/10.1126/sciadv.ado0955" target="_blank" rel="noopener noreferrer">Ellis & Gelman, 2024</a></strong>). In continental settings, sub-circular depressions associated with H₂ seepages have been reported in several cratonic domains (<strong><a href="https://link.springer.com/article/10.1007/s11053-014-9257-5" target="_blank" rel="noopener noreferrer">Larin et al., 2015</a></strong>; <strong><a href="https://www.mdpi.com/2075-163X/12/2/163" target="_blank" rel="noopener noreferrer">Geymond et al., 2022</a></strong>; <strong><a href="https://doi.org/10.1016/j.ijhydene.2025.02.094" target="_blank" rel="noopener noreferrer">Davies et al., 2025</a></strong>). These landforms can be considered surface markers analogous to pockmarks and may provide a key proxy for basin-scale exploration. However, their morphological variability complicates systematic identification. Deep neural networks applied to satellite imagery provide a powerful framework to automate their large-scale detection (<strong><a href="https://doi.org/10.1016/j.marpetgeo.2025.107617" target="_blank" rel="noopener noreferrer">Roche et al., 2025</a></strong>; <strong><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025EA004227" target="_blank" rel="noopener noreferrer">Ginzburg et al., 2025</a></strong>), producing maps of morphologically anomalous targets that can be prioritized for future in situ measurement campaigns.</p>
         <p>Moving from morphological preselection to a hierarchy of productive potential requires evaluating the generative capacity of deep sources. Petrographic analyses and statistical simulations based on the properties of potential source rocks can be used to quantify H₂ and ⁴He production rates while integrating the natural uncertainty of geological parameters (<strong><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025GC012745" target="_blank" rel="noopener noreferrer">Geymond et al., 2026</a></strong>).</p>
         <h5>Why does it matter?</h5>
-        <p>Georesource systems are rarely controlled by a single factor. They emerge from the coupling between source rocks, structural pathways, lithological barriers, fluid-rock reactions, burial and exhumation histories, and long-term preservation. Combining surface geomorphological markers, geophysical data, geological mapping, and predictive models makes it possible to move from isolated observations toward integrated basin-scale exploration strategies.</p>
+        <p>Georesource systems are rarely controlled by a single factor. They emerge from the coupling between source rocks, structural pathways, lithological barriers, fluid-rock reactions, burial and exhumation histories, and long-term preservation. Combining surface geomorphological markers, geophysical data, geological mapping, and predictive models makes it possible to move from isolated observations toward integrated basin-scale observation, analysis, and exploration strategies.</p>
         <p>This approach is particularly important for emerging resources such as natural hydrogen, where direct measurements remain sparse. By linking AI-based detection, spatial statistics, and geological process understanding, it becomes possible to identify priority areas, reduce exploration uncertainty, and test whether observed surface anomalies are consistent with plausible subsurface generation and migration systems.</p>
         <div class="research-panorama">
           <img src="assets/bloc_diagram_resource.jpg" alt="Scientific diagram of georesource systems">
