@@ -357,6 +357,11 @@
       line-height: 1.72;
       margin-bottom: 14px;
       max-width: 830px;
+      text-align: justify;
+    }
+
+    .about-text .hello {
+      text-align: left;
     }
 
     .about-text .hello {
@@ -523,6 +528,7 @@
       line-height: 1.72;
       margin-bottom: 14px;
       max-width: 980px;
+      text-align: justify;
     }
 
     .research-panorama {
@@ -967,7 +973,7 @@
     }
 
     .publication:hover .publication-details {
-      max-height: 1400px;
+      max-height: 2200px;
       opacity: 1;
       margin-top: 18px;
     }
@@ -978,11 +984,179 @@
       line-height: 1.62;
       padding-top: 18px;
       border-top: 1px solid var(--line);
+      text-align: justify;
     }
 
     .publication-link {
       display: inline-flex;
       margin-top: 14px;
+      color: var(--accent-dark);
+      font-weight: 800;
+      border-bottom: 1px solid rgba(87,54,30,0.45);
+    }
+
+    .collaboration-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .collaboration-tab {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.46);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .collaboration-tab:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.82);
+      color: var(--ink);
+      box-shadow: 0 10px 24px rgba(58, 42, 24, 0.08);
+    }
+
+    .collaboration-tab.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--paper);
+    }
+
+    .collaboration-panel {
+      display: none;
+    }
+
+    .collaboration-panel.active {
+      display: block;
+    }
+
+    .collaboration-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .collaboration-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: rgba(255,255,255,0.52);
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .collaboration-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.82);
+      box-shadow: 0 18px 48px rgba(58, 42, 24, 0.11);
+    }
+
+    .collaboration-logo {
+      width: 86px;
+      height: 86px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .collaboration-logo img {
+      width: 82%;
+      height: 82%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .collaboration-info h3 {
+      font-size: 1.22rem;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .collaboration-info p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .project-placeholder {
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: rgba(255,255,255,0.52);
+      padding: 36px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .poster-details-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 24px;
+      align-items: start;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .poster-abstract {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.62;
+      text-align: justify;
+    }
+
+    .poster-text-column {
+      text-align: justify;
+    }
+
+    .poster-preview {
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 18% 24%, rgba(167,102,43,0.18), transparent 28%),
+        linear-gradient(135deg, #efe3d2, #fffdf8);
+      overflow: hidden;
+      position: relative;
+      display: block;
+    }
+
+    .poster-preview img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background: var(--paper);
+    }
+
+    .poster-preview::after {
+      content: attr(data-label);
+      position: absolute;
+      right: 14px;
+      bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,253,248,0.82);
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid rgba(222,213,199,0.8);
+    }
+
+    .poster-download {
+      display: inline-flex;
+      margin-top: 10px;
       color: var(--accent-dark);
       font-weight: 800;
       border-bottom: 1px solid rgba(87,54,30,0.45);
@@ -1073,6 +1247,14 @@
         gap: 8px;
       }
 
+      .poster-details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .collaboration-grid {
+        grid-template-columns: 1fr;
+      }
+
       .nav-links {
         display: none;
       }
@@ -1087,6 +1269,7 @@
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#cv">Curriculum Vitae</a>
+        <a href="#collaborations">Collaborations & Projects</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </div>
@@ -1207,6 +1390,7 @@
 
       <div class="publication-tabs" role="tablist" aria-label="Publication categories">
         <button class="publication-tab active" data-panel="articles" type="button">Articles</button>
+        <button class="publication-tab" data-panel="posters" type="button">Posters</button>
         <button class="publication-tab" data-panel="thesis" type="button">Thesis</button>
         <button class="publication-tab" data-panel="patents" type="button">Patents & Intellectual Property</button>
       </div>
@@ -1216,11 +1400,11 @@
           <article class="publication">
             <div class="publication-title-row">
               <span class="pub-badge">5</span>
-              <b class="publication-title-text">Radiolysis and Fe-Biotite Alteration: Questioning the Origin of H2-Bearing Fluid Inclusions in the Yorke Peninsula Granites, South Australia</b>
+              <b class="publication-title-text">Radiolysis and Fe-Biotite Alteration: Questioning the Origin of H₂-Bearing Fluid Inclusions in the Yorke Peninsula Granites, South Australia</b>
             </div>
             <p class="publication-authors">U. Geymond, D. Lévy, J. Bourdet, I. Martinez, O. Sissmann, S. Revillon, R. Gormit, S. Bernard, P.H. Blard, D. Bekaert, <strong>J. Daynac</strong>, S. Borensztajn, E. Gong, C. Herviou, E. Frery, I. Moretti. <em>Geochemistry, Geophysics, Geosystems</em>, 2026.</p>
             <div class="publication-details">
-              <p class="publication-abstract">Multiple drillings in the Yorke Peninsula, South Australia, recently confirmed the presence of natural hydrogen (H2) in shallow sedimentary units. While radiolysis and Fe-oxidation in the basement are potential generation mechanisms, their respective contributions remain unconstrained. This study investigates the H2-generation potential of Fe-rich Hiltaba Suite granites (~1.5 Ga) through petrographic analyses of a basement drill core collected near H2 occurrences. Fluid circulation, a prerequisite for both radiolysis and Fe-oxidation, is evidenced by feldspar sericitization and fluid inclusions. Raman spectroscopy and sample crushing analyses reveal H2 and He, suggesting that the Hiltaba granites contribute to the gas budget observed in the overlying sedimentary units. He isotopic analyses indicate a crustal He origin and radiolytic H2 generation. A combination of SEM, TEM, EPMA and STXM analyses showed that biotite chloritization did not involve Fe-oxidation, ruling out any significant contribution of Fe oxidation to H2 generation. Geothermometric calculations indicate that the last fluid circulation event occurred at 300–400°C, implying that the system last opened dynamically at least 370 Ma ago. Consequently, diffusive migration of H2 and He from the basement may account for the gas fluxes in the sedimentary cover.</p>
+              <p class="publication-abstract">Multiple drillings in the Yorke Peninsula, South Australia, recently confirmed the presence of natural hydrogen (H₂) in shallow sedimentary units. While radiolysis and Fe-oxidation in the basement are potential generation mechanisms, their respective contributions remain unconstrained. This study investigates the H₂-generation potential of Fe-rich Hiltaba Suite granites (~1.5 Ga) through petrographic analyses of a basement drill core collected near H₂ occurrences. Fluid circulation, a prerequisite for both radiolysis and Fe-oxidation, is evidenced by feldspar sericitization and fluid inclusions. Raman spectroscopy and sample crushing analyses reveal H₂ and He, suggesting that the Hiltaba granites contribute to the gas budget observed in the overlying sedimentary units. He isotopic analyses indicate a crustal He origin and radiolytic H₂ generation. A combination of SEM, TEM, EPMA and STXM analyses showed that biotite chloritization did not involve Fe-oxidation, ruling out any significant contribution of Fe oxidation to H₂ generation. Geothermometric calculations indicate that the last fluid circulation event occurred at 300–400°C, implying that the system last opened dynamically at least 370 Ma ago. Consequently, diffusive migration of H₂ and He from the basement may account for the gas fluxes in the sedimentary cover.</p>
               <a class="publication-link" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025GC012745" target="_blank" rel="noopener noreferrer">Link to the article</a>
             </div>
           </article>
@@ -1232,7 +1416,7 @@
             </div>
             <p class="publication-authors">V. Roche, <strong>J. Daynac</strong>, S. Hesni, U. Geymond, N. Ginzburg, J. Philippon, I. Moretti. <em>Marine and Petroleum Geology</em>, 2025.</p>
             <div class="publication-details">
-              <p class="publication-abstract">Natural hydrogen (H2) holds promising potential as a clean energy source, but its exploration remains challenging due to limited knowledge and a lack of quantitative tools. In this context, identifying active H2 seepage areas is crucial for advancing exploration efforts. Here, we focus on sub-circular depressions (SCDs) that often mark high H2 concentration in soils, thought to correspond to deeper fluxes seeping at the surface, making them promising targets for exploration. Coupling open-access Google Earth imagery and in-field H2 measurement data, an artificial intelligence model was trained to detect seepage zones. The model achieves an average precision of 95%, detects and maps seepage zones in new regions such as Kazakhstan and South Africa, and highlights its potential for global application. Preliminary spatial analyses show that geological features control the distribution of H2-SCDs that can emit billions of tons of H2 at the scale of a sedimentary basin. This study paves the way for a faster and more efficient methodology for selecting H2 exploration targets.</p>
+              <p class="publication-abstract">Natural hydrogen (H₂) holds promising potential as a clean energy source, but its exploration remains challenging due to limited knowledge and a lack of quantitative tools. In this context, identifying active H₂ seepage areas is crucial for advancing exploration efforts. Here, we focus on sub-circular depressions (SCDs) that often mark high H₂ concentration in soils, thought to correspond to deeper fluxes seeping at the surface, making them promising targets for exploration. Coupling open-access Google Earth imagery and in-field H₂ measurement data, an artificial intelligence model was trained to detect seepage zones. The model achieves an average precision of 95%, detects and maps seepage zones in new regions such as Kazakhstan and South Africa, and highlights its potential for global application. Preliminary spatial analyses show that geological features control the distribution of H₂-SCDs that can emit billions of tons of H₂ at the scale of a sedimentary basin. This study paves the way for a faster and more efficient methodology for selecting H₂ exploration targets.</p>
               <a class="publication-link" href="https://doi.org/10.1016/j.marpetgeo.2025.107617" target="_blank" rel="noopener noreferrer">Link to the article</a>
             </div>
           </article>
@@ -1244,7 +1428,7 @@
             </div>
             <p class="publication-authors">N. Ginzburg, <strong>J. Daynac</strong>, S. Hesni, U. Geymond, V. Roche. <em>Earth and Space Science</em>, 2025.</p>
             <div class="publication-details">
-              <p class="publication-abstract">Hydrogen has long been used as an energy vector, but the recent discovery of natural hydrogen (H2) opens the door for its use as a direct energy source. Identifying H2 seepages is therefore crucial to advance exploration. Although the scientific community does not yet fully understand the parameters controlling H2 leaks from underground, sub-circular depressions appear to be key indicators associated with these emissions. However, distinguishing SCDs from similar landforms remains a challenge. This study leverages open-source multispectral and high-resolution imagery to train a deep learning model for classifying rounded landforms and detecting H2-related structures. The model achieved 90% accuracy with Google Maps imagery, outperforming Sentinel-2 multispectral data. Applied to a pre-existing data set from Brazil, the model allowed large-scale screening, discarding 52% of the structures as non-H2 emitting ones and pinpointing high-potential areas for field validation.</p>
+              <p class="publication-abstract">Hydrogen has long been used as an energy vector, but the recent discovery of natural hydrogen (H₂) opens the door for its use as a direct energy source. Identifying H₂ seepages is therefore crucial to advance exploration. Although the scientific community does not yet fully understand the parameters controlling H₂ leaks from underground, sub-circular depressions appear to be key indicators associated with these emissions. However, distinguishing SCDs from similar landforms remains a challenge. This study leverages open-source multispectral and high-resolution imagery to train a deep learning model for classifying rounded landforms and detecting H₂-related structures. The model achieved 90% accuracy with Google Maps imagery, outperforming Sentinel-2 multispectral data. Applied to a pre-existing data set from Brazil, the model allowed large-scale screening, discarding 52% of the structures as non-H₂ emitting ones and pinpointing high-potential areas for field validation.</p>
               <a class="publication-link" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025EA004227" target="_blank" rel="noopener noreferrer">Link to the article</a>
             </div>
           </article>
@@ -1275,6 +1459,78 @@
         </div>
       </div>
 
+      <div class="publication-panel" id="posters">
+        <div class="publications">
+          <article class="publication">
+            <div class="publication-title-row">
+              <span class="pub-badge">3</span>
+              <b class="publication-title-text">The Dawn of AI for Geosciences</b>
+            </div>
+            <p class="publication-authors"><strong>J. Daynac</strong>, V. Roche, A. Zanella, S. Hesni, J. Philippon, U. Geymond, N. Ginzburg. <em>H-NAT Summit</em>, 2025.</p>
+            <a class="poster-download" href="assets/posters/dawn_ai_geosciences_2025.pdf" target="_blank" rel="noopener noreferrer">Download poster · PDF</a>
+            <div class="publication-details">
+              <div class="poster-details-grid">
+                <div class="poster-text-column">
+                  <p class="poster-abstract">Advances in geosciences have historically been closely tied to the technologies available at the time. In some cases, they have even driven major scientific breakthroughs with broad societal impacts. Today, while artificial intelligence (AI) is transforming entire sectors such as medicine and finance, geosciences are still slow to fully embrace these tools, despite their relevance in addressing environmental and energy-related challenges.</p>
+                  <p class="poster-abstract">AI is progressing in well-structured subfields such as hydrology, water resource management, seismic interpretation, and climate forecasting (Zhao et al., 2025; Mohanty, 2025). However, its integration into other domains, particularly resource exploration, remains limited. Several obstacles persist: heterogeneous data availability (e.g., borehole data, very high-resolution satellite imagery), scarcity or lack of labeled datasets, the spatial complexity of geological systems, and the absence of standards or benchmarks to evaluate model reliability. This lag is problematic in a context where the demand for resources is increasing. The energy transition, driven by climate change, is intensifying the need for critical materials. Natural hydrogen (H₂), though still underexplored, is emerging as a promising and environmentally respectful energy resource. It represents a potential alternative to current industrial hydrogen production methods, more than 95% of which emit significant amounts of greenhouse gases (GHGs). In parallel, geological CO₂ storage is being considered as a major decarbonization pathway (Lu et al., 2025). The expansion of renewable energy technologies also increases dependency on strategic minerals (e.g., Cu, Li, Co, REEs), which are essential for batteries, energy grids, and infrastructure (IAE, 2021).</p>
+                  <p class="poster-abstract">In this context, AI can play a key role. It enables the automated analysis of complex geospatial datasets (e.g., satellite, geophysical, and spectroscopic data), the identification of non-linear patterns, the acceleration of mapping processes, and the optimization of exploration strategies. It provides a strategic advantage for supporting decision-making in academic, industrial, and policy contexts. However, realizing this potential requires combining AI expertise with deep geological knowledge. Developing effective tools implies dual competencies: a strong understanding of field-based challenges and proficiency in machine learning methods. This is the goal of the approaches developed in our research, grouped under the concept of Artificial Intelligence for Terrain and Exploration Resources (AITER). These methods are designed to address operational needs, reduce bias, and improve interpretability.</p>
+                  <p class="poster-abstract">We present here several concrete examples from our work, illustrating how AI can intervene at various stages of the resource value chain. In particular, we focus on a case study involving the application of AI to the prospection of subcircular depressions (SCDs) potentially associated with natural H₂ seepages. Understanding these depressions is crucial, as they may indicate the presence of deep subsurface reservoirs. Their characterization could provide valuable insights into the mechanisms of H₂ transport and surface migration, in relation to geological features. Our method achieves a precision of 95% and detects more than 5,000 SCDs on a large scale across the Kazakhstan and South Africa basins (Roche et al., 2025). Statistical analyses revealed a spatial control related to both lithological context and structural features, highlighting the relevance of geologically informed AI approaches in natural resource exploration. Beyond their technical performance, these tools reflect a central conviction that when appropriately designed and applied, AI can help prioritize, accelerate, and enhance the reliability of large-scale geoscientific data analysis, opening the way for more systematic and efficient resource exploration. Even if it will not make decisions for us, it could become a discreet but decisive guide in shaping the geosciences of tomorrow, aligned with the challenges of the 21st century.</p>
+                </div>
+                <div class="poster-preview" data-label="Poster preview">
+                  <img src="assets/posters/dawn_ai_geosciences_2025.jpg" alt="The Dawn of AI for Geosciences poster preview">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-title-row">
+              <span class="pub-badge">2</span>
+              <b class="publication-title-text">How geologists and AI collaborate for characterizing naturally fractured carbonates at subseismic scale: A karstified field example</b>
+            </div>
+            <p class="publication-authors">T. Cavailhes, <strong>J. Daynac</strong>, T. Mulder, V. Marieu, H. Gillet. <em>ASF</em>, 2024.</p>
+            <a class="poster-download" href="assets/posters/ai_fractured_carbonates_2024.pdf" target="_blank" rel="noopener noreferrer">Download poster · PDF</a>
+            <div class="publication-details">
+              <div class="poster-details-grid">
+                <div class="poster-text-column">
+                  <p class="poster-abstract">In recent years, the use of AI (Artificial Intelligence and Deep Learning) has expanded in geosciences, particularly for the 3D mapping of structural heterogeneities (e.g. faults, fractures, fracture corridors) in Naturally Fractured Rocks (NFRs), based on the analysis of outcrops and/or seismic blocks. The objective is to improve Discrete Fracture Networks (DFNs), which are essential for both academic and industrial static and dynamic reservoir models.</p>
+                  <p class="poster-abstract">To compare, validate, and constrain the work carried out by AI, we compare a map established using classical field structural analysis methods with a map produced by deep learning. In order to minimize sampling bias and structural recognition bias, the AI training phase was supervised by the geologists themselves, who also carried out the field measurements.</p>
+                  <p class="poster-abstract">The study area is located in northwestern Spain, on a perched syncline of about 15 km², formed by Upper Cretaceous limestones and situated at an elevation of about 1200 m. This 42 m-thick plateau of recrystallized Upper Turonian to Santonian limestones overlies conglomeratic and sandy Albian–Cenomanian valleys through a thin layer of Lower Turonian gray marls. The system is intensely karstified, and the presence of caves locally provides subsurface structural observations. Structural analysis based on aerial photographs allowed the mapping of fractures and the quantification of their orientations, densities, lengths, connectivities, and the relative proportions of node types within the networks (I for isolated fracture, X for intersecting fractures, Y for abutting fractures; Manzocchi, 2002).</p>
+                  <p class="poster-abstract">From a methodological point of view, AI is used to analyze the similarities and spatial organization of adjacent pixels in an image, interpolate them, and ultimately classify them as fractures or other predefined structures. It does not extrapolate the mapped traces of structural heterogeneities. AI analysis is therefore strictly factual and does not involve prior interpretation. The role of the structural geologist is to “teach the machine” how to recognize structurally valid interpolations on a reduced surface where the examples are unequivocal in terms of interpretation. Once calibrated, AI is faster than the geologist for mapping the same surface area. GIS vectorization of the results, using tools dedicated to fracture network analysis (e.g. NetworkGT; Nyberg et al., 2018), allows a quantitative use of the morphometric attributes of the structures (e.g. length, density, connectivity type).</p>
+                  <p class="poster-abstract">In 2024, however, AI-generated mapping can still be misled by partial vegetation cover, except where vegetation is distributed along fractures. One possible avenue for improvement would be the hierarchical classification of the mapped structural heterogeneities (e.g. faults, fractures, fracture corridors), which would in turn imply a hierarchy in the structural permeability of each type of feature (aperture-dependent). This optimization could be achieved by training AI on several image types or several data sources in order to generate a single synthetic map (e.g. aerial photographs, thresholded and colorized topographic data, vegetation maps).</p>
+                  <p class="poster-abstract">We show that the use of AI by geologists is a valuable aid for validating their own interpretations, but it does not remove the need to contextualize AI-based mapping (e.g. structural framework, deformation chronology, lithologies, vegetation recognition, anthropogenic structures), to guide the method for each new image morphotype used (calibration), to complete mapping in vegetated or high-relief areas, and to verify the results in situ (e.g. cores, field observations). Finally, each type of heterogeneity must be assigned, on the basis of observations, a structural porosity value that primarily controls its intrinsic permeability (e.g. open or cemented fracture).</p>
+                </div>
+                <div class="poster-preview" data-label="Poster preview">
+                  <img src="assets/posters/ai_fractured_carbonates_2024.jpg" alt="AI and naturally fractured carbonates poster preview">
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-title-row">
+              <span class="pub-badge">1</span>
+              <b class="publication-title-text">Deep Learning: A new tool for mapping and analysis dunes (ex: Rub'Al Khali sand sea)</b>
+            </div>
+            <p class="publication-authors"><strong>J. Daynac</strong>, P. Bessin, S. Pochat, R. Mourgues. <em>MARID</em>, 2023.</p>
+            <a class="poster-download" href="assets/posters/deep_learning_dunes_marid_2023.pdf" target="_blank" rel="noopener noreferrer">Download poster · PDF</a>
+            <div class="publication-details">
+              <div class="poster-details-grid">
+                <div class="poster-text-column">
+                  <p class="poster-abstract">The surface of Earth and Mars present abundant periodic topographic forms at different scales (mm-km) and in different environments (e.g. Aeolian, Subglacial) called bedforms (e.g. dunes, drumlins). These bedforms develop at the interface between the moving fluid and a deformable and/or erodible material. Generally, these bedforms are grouped in field which presents a great scientific interest because their morphological characteristics (e.g. shape, size, orientation, complexity, organization) depend on the physical characteristics of i) the moving fluid (e.g. velocity, direction of movement, viscosity), ii) the available sedimentary stock (e.g. density, shape, grain size). Thus, local to regional mapping and producing a morphometric analysis of these bedforms can provide elements to understand their processes of formation and to reconstruct the (paleo)flow dynamics of the fluids involved.</p>
+                  <p class="poster-abstract">First, we developed an automated protocol in order to extract the characteristics of aeolian dunes (figure 1): Dune mapping and analysis in QGis, Python and eCognition are performed using a steps succession: i) Residual Relief extraction as a key feature in deep learning; ii) Deep learning approach (Convolutional Neural Network (CNN), used for the morphology segmentation process from DTM derivatives; iii) Volumetric Obscurance approach (DTM derivative) used for the crestlines extraction. Finally, we extract the morphometric indexes (sinuosity, elongation, circularity) of each dune.</p>
+                  <p class="poster-abstract">We applied this method to analyze the Quaternary aeolian dunes of Rub'Al Khali desert, in the Arabian Peninsula. We choose this analogue because of its wide surface (660,000 km²), ii) its dune diversity, and iii) the different observation scales within the available dataset (Copernicus DTM 30m: https://opentopography.org/). Our results show that these successive steps have allowed us to produce a detailed map of the dune morphologies of the Rub'Al Khali desert at two observation scales (kilometer and hectometer).</p>
+                  <p class="poster-abstract">In total, 78,000 dunes and crestlines were mapped in 6 hours of processing on 58,000 km² surface. The dune shape vectors were used to calculate and analyze the dune morphometry. Morphometric indices highlight three spatial domains that illustrate a spatial variability for circularity index (strong for star and dome dunes), sinuosity index (strong for mega-barchanoid ridges) and elongation index (strong for linear dunes) oriented to the median wind direction.</p>
+                </div>
+                <div class="poster-preview" data-label="Poster preview">
+                  <img src="assets/posters/deep_learning_dunes_marid_2023.jpg" alt="Deep learning dunes MARID poster preview">
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
       <div class="publication-panel" id="thesis">
         <div class="publications">
           <article class="publication">
@@ -1282,7 +1538,7 @@
               <span class="pub-badge">1</span>
               <b class="publication-title-text">Contribution de l'Intelligence Artificielle à la cartographie pour l'analyse des dunes à l'échelle d'un désert: cas d'étude du Rub'Al Khali</b>
             </div>
-            <p class="publication-authors"><strong>J. Daynac</strong>. Le Mans Université, 2024.</p>
+            <p class="publication-authors"><strong>J. Daynac</strong>. <em>Le Mans Université</em>, 2024.</p>
             <div class="publication-details">
               <p class="publication-abstract">Aeolian dunes at different scales are the primary topographic forms in aeolian systems and are found on various planetary bodies such as Earth, Mars, or Venus. They result from the interaction between wind, transported sediments, and the substrate. This thesis proposes a new method for mapping aeolian dunes by coupling deep learning to delineate dune outlines, skeletonization, and network analysis to map crestlines and connectivities. The developed algorithms reach an accuracy of around 90% and enabled the creation of a large database of several thousand dunes from the Rub'Al Khali desert. From this database, the morphological variability of the dunes was analyzed using ERA5-Land wind data and spatial morphometric statistics. Principal Component Analysis highlights dominant morphometric controls, while spatial tests confirm a significant organization of dunes at desert scale. The comparison with wind data supports an evolutionary model in which dune shape, size, and orientation are controlled by directional sand fluxes associated with Shamal and Kharif winds, revealing two dune growth modes: elongation in the west and instability-driven vertical growth in the east.</p>
               <a class="publication-link" href="https://theses.hal.science/tel-04906491/" target="_blank" rel="noopener noreferrer">Link to the thesis</a>
@@ -1316,7 +1572,7 @@
       <div class="section-head">
         <p class="section-kicker project-section-title cv-kicker-large">Curriculum Vitae</p>
         <div>
-          <h2 class="cv-title-small">Academic background, positions, professional experience and funding.</h2>
+          <h2 class="cv-title-small">Academic background, positions, professional experience and funding</h2>
           <a class="cv-download" href="assets/CV_Daynac_2026.pdf" download>Download full CV · PDF</a>
         </div>
       </div>
@@ -1459,8 +1715,37 @@
   </div>
 </div>
 
+    <section id="collaborations">
+      <div class="section-head">
+        <p class="section-kicker project-section-title cv-kicker-large">Collaborations & Projects</p>
+        <h2 class="cv-title-small">Scientific collaborations, shared tools and ongoing project pages</h2>
+      </div>
 
+      <div class="collaboration-tabs" role="tablist" aria-label="Collaborations and projects categories">
+        <button class="collaboration-tab active" data-collab-panel="collaboration" type="button">Collaborations</button>
+        <button class="collaboration-tab" data-collab-panel="projects" type="button">Projects</button>
+      </div>
 
+      <div class="collaboration-panel active" id="collaboration">
+        <div class="collaboration-grid">
+          <a class="collaboration-card" href="https://outcrop-analogue.com/thibault-cavailhes/" target="_blank" rel="noopener noreferrer">
+            <div class="collaboration-logo">
+              <img src="assets/collaborations/outcrop_analogue_logo.jpg" alt="Outcrop Analogue logo">
+            </div>
+            <div class="collaboration-info">
+              <h3>Outcrop Analogue</h3>
+              <p>Regular collaboration with Thibault CAVAILHES, senior structural geologist (PhD) currently affiliated with UMR CNRS 5805 EPOC – OASU.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="collaboration-panel" id="projects">
+        <div class="project-placeholder">
+          Page under construction.
+        </div>
+      </div>
+    </section>
 
     <section id="contact">
       <div class="contact-box">
@@ -1557,6 +1842,19 @@
 
         tab.classList.add('active');
         document.getElementById(tab.dataset.panel).classList.add('active');
+      });
+    });
+
+    const collaborationTabs = document.querySelectorAll('.collaboration-tab');
+    const collaborationPanels = document.querySelectorAll('.collaboration-panel');
+
+    collaborationTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        collaborationTabs.forEach((item) => item.classList.remove('active'));
+        collaborationPanels.forEach((panel) => panel.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.collabPanel).classList.add('active');
       });
     });
   </script>
