@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jimmy Daynac | AI for Geosciences</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <style>
     :root {
       --bg: #f7f3eb;
@@ -1099,6 +1100,90 @@
       font-size: 1.05rem;
     }
 
+    .project-title-row {
+      align-items: center;
+    }
+
+
+    .project-panel-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .project-entry {
+      display: inline-block;
+      width: fit-content;
+      max-width: 760px;
+      min-height: 0;
+      padding: 24px;
+      border-radius: 26px;
+    }
+
+    .project-entry:hover {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .project-entry .publication-title-row {
+      align-items: center;
+      width: fit-content;
+      margin-bottom: 0;
+    }
+
+
+    .project-logo-badge {
+      flex: 0 0 auto;
+      width: 86px;
+      height: 86px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(58, 42, 24, 0.10);
+    }
+
+    .project-logo-badge img {
+      width: 82%;
+      height: 82%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .project-entry:hover .publication-details {
+      max-height: 5200px;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-top: 18px;
+      align-items: center;
+    }
+
+    .project-links span {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .project-links a {
+      color: var(--accent-dark);
+      font-weight: 800;
+      border-bottom: 1px solid rgba(87,54,30,0.45);
+    }
+
+    .project-preview img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background: var(--paper);
+    }
+
     .poster-details-grid {
       display: grid;
       grid-template-columns: 0.92fr 1.08fr;
@@ -1737,12 +1822,55 @@
         </div>
       </div>
 
-      <div class="collaboration-panel" id="projects">
-        <div class="project-placeholder">
-          Page under construction.
+         <div class="collaboration-panel" id="projects">
+        <div class="publications">
+
+          <article class="publication project-entry">
+            <div class="publication-title-row project-title-row">
+              <span class="project-logo-badge">
+                <img src="assets/projects/AITER_logo.png" alt="AI.TER logo">
+              </span>
+              <div>
+                <b class="publication-title-text">AI.TER</b>
+                <p class="publication-authors">Artificial Intelligence for Terrain and Exploration Resources.</p>
+              </div>
+            </div>
+
+            <div class="publication-details">
+              <div class="poster-details-grid">
+                <div class="poster-text-column">
+                  <p class="poster-abstract">The AI.TER (Artificial Intelligence for Terrain and Exploration Resources) project arose from an observation I made during my doctoral research: recent advances in AI now offer powerful tools for exploring, with greater precision and speed, complex scientific problems that were previously difficult to address on a large scale. This is particularly true in the field of geosciences, where AI now makes it possible to overcome certain limitations of traditional prospecting and analysis approaches by making extensive use of data from remote sensing and geological archives.</p>
+
+                  <p class="poster-abstract">Furthermore, in the current context of climate change and growing political pressure in favor of the energy transition, the search for new, low-carbon, reliable, and sustainable natural resources has emerged as a major strategic challenge. Historically, the search for these resources has relied on traditional geological approaches, combining field prospecting, interpretation of indirect observational data such as geophysical data, and manual analysis of satellite data. While these methods have led to significant progress, they remain limited by their cost, the time required to implement them, their environmental impacts, and the difficulty of analyzing growing volumes of data on a regional or continental scale.</p>
+
+                  <p class="poster-abstract">Over the past decade, the emergence of high-resolution remote sensing and the explosion of available data (e.g., optical satellites, radar, airborne geophysics) have created unprecedented potential for exploration. However, the analysis and interpretation of this data require considerable human and technical resources. At the same time, AI, and in particular supervised and unsupervised learning techniques, has demonstrated its ability to automatically extract complex patterns from datasets, opening up new possibilities for the development of powerful digital tools for the short-term planning and exploration of sustainable energy solutions.</p>
+
+                  <p class="poster-abstract">The tools developed in the AI.TER project are based on methodological advances stemming from my doctoral thesis and my recent research (see the “Publications, Articles / Patents & Intellectual Property” section). The innovation of our project rests on three pillars: i) the systematic integration of different types of data (satellite, geological, geophysical, qualitative, quantitative), ii) the ability to rapidly produce actionable predictions at the local, regional, or continental scale, and iii) the design of scalable decision-support tools that can be adapted to different resources and take into account the co-valorization of these resources (natural hydrogen, detection and characterization of fractured reservoirs for CO₂ sequestration, and the favorability of mineralization in mineral deposits).</p>
+
+                  <p class="poster-abstract">By focusing on strategic applications related to the energy transition and our energy sovereignty, AI.TER positions itself at the intersection of academic scientific innovation, technological development, and applied industrial research. It thus addresses a critical need: to explore our subsurface more quickly, more efficiently, and in a more sustainable and responsible manner, by fully leveraging AI advancements in the service of the geosciences.</p>
+
+                  <p class="poster-abstract">In addition, the AI.TER project is designed to enable the rapid transfer of innovation to concrete academic and industrial applications. Since its initial phase, it has relied on artificial intelligence tools developed to address immediate needs in geological exploration. These tools generate directly usable outputs: spatial analyses, interpretive reports, suitability atlases, and integrated services intended for a broad community (academic researchers, engineering firms, energy and resource companies, environmental stakeholders, and NGOs).</p>
+
+                  <p class="poster-abstract">But beyond mere economic value creation, AI.TER also aims to contribute to the emergence of a new model of dynamic and mutually supportive collaboration between academic research and the industrial sector. In the current climate of budgetary constraints and declining public funding for science, and more broadly for academia, this project seeks to demonstrate that it is possible to maintain high-caliber research while addressing real-world needs by forging flexible bridges between basic science and its societal applications.</p>
+
+                  <div class="project-links">
+                    <span>For more information:</span>
+                    <a href="https://www.atlanpole.fr/ai-ter-lintelligence-artificielle-au-service-de-la-decouverte-de-ressources-energetiques/" target="_blank" rel="noopener noreferrer">Atlanpole article</a>
+                    <a href="https://www.insu.cnrs.fr/fr/cnrsinfo/un-geoscientifique-laureat-du-programme-rise-avec-son-projet-aiter" target="_blank" rel="noopener noreferrer">CNRS INSU article</a>
+                  </div>
+                </div>
+
+                <div class="poster-preview project-preview" data-label="Project illustration">
+                  <img src="assets/projects/AITER_project.png" alt="AI.TER project illustration">
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
+
 
     <section id="contact">
       <div class="contact-box">
